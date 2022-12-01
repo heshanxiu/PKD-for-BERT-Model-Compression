@@ -10,6 +10,7 @@
 #SBATCH --gpus=1
 #SBATCH -t 08:00:00
 
-
-source activate /home/she2/.conda/envs/ir
+module load anaconda3
+eval "$(conda shell.bash hook)"
+conda activate /home/she2/.conda/envs/ir
 CUDA_VISIBLE_DEVICES=0 nohup python -u NLI_KD_training.py > finetune_teacher.txt &
