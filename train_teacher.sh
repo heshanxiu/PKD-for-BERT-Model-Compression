@@ -12,5 +12,5 @@
 
 module load anaconda3
 eval "$(conda shell.bash hook)"
-conda activate /home/she2/.conda/envs/ir
+conda activate /home/she2/anaconda3/envs/ir/
 CUDA_VISIBLE_DEVICES=0 nohup python -u NLI_KD_training.py > finetune_teacher.txt &
