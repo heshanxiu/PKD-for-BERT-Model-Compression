@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="990eb0db-3f08-477c-b808-619b9c3c67f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BERT/examples/lm_finetuning/finetune_on_pregenerated.py" beforeDir="false" afterPath="$PROJECT_DIR$/BERT/examples/lm_finetuning/finetune_on_pregenerated.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BERT/examples/lm_finetuning/simple_lm_finetuning.py" beforeDir="false" afterPath="$PROJECT_DIR$/BERT/examples/lm_finetuning/simple_lm_finetuning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BERT/examples/run_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/BERT/examples/run_classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BERT/examples/run_squad.py" beforeDir="false" afterPath="$PROJECT_DIR$/BERT/examples/run_squad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BERT/examples/run_swag.py" beforeDir="false" afterPath="$PROJECT_DIR$/BERT/examples/run_swag.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train_teacher.sh" beforeDir="false" afterPath="$PROJECT_DIR$/train_teacher.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +48,9 @@
       <updated>1669675492903</updated>
       <workItem from="1669675494883" duration="5073000" />
       <workItem from="1669766598332" duration="475000" />
-      <workItem from="1669847363119" duration="4150000" />
+      <workItem from="1669847363119" duration="9560000" />
+      <workItem from="1670178613722" duration="84000" />
+      <workItem from="1670358351877" duration="1160000" />
     </task>
     <servers />
   </component>

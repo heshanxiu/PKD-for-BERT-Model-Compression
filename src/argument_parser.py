@@ -76,7 +76,7 @@ def default_parser():
                         help="Number of updates steps to accumulate before performing a backward/update pass.")
     parser.add_argument('--fp16',
                         type=boolean_string,
-                        default=True,
+                        default=False,
                         help="Whether to use 16-bit float precision instead of 32-bit")
     parser.add_argument('--loss_scale',
                         type=float, default=0,
@@ -231,7 +231,7 @@ def get_predefine_argv(mode='glue', task_name='RTE', train_type='kd'):
                 '--output_dir', os.path.join(HOME_DATA_FOLDER, f'outputs/KD/{task_name}/teacher_12layer'),
                 '--do_train', 'True',
                 '--do_eval', 'True',
-                '--fp16', 'True',
+                '--fp16', 'False',
             ]
         if train_type == 'finetune_teacher':
             argv += [

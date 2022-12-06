@@ -7,6 +7,7 @@ import random
 import numpy as np
 from collections import namedtuple
 from tempfile import TemporaryDirectory
+from apex import amp
 
 from torch.utils.data import DataLoader, Dataset, RandomSampler
 from torch.utils.data.distributed import DistributedSampler
@@ -236,7 +237,8 @@ def main():
     model.to(device)
     if args.local_rank != -1:
         try:
-            from apex.parallel import DistributedDataParallel as DDP
+            # from apex.parallel import DistributedDataParallel as DDP
+            from torch.nn.parallel import DistributedDataParallel as DDP
         except ImportError:
             raise ImportError(
                 "Please install apex from https://www.github.com/nvidia/apex to use distributed and fp16 training.")
@@ -302,7 +304,9 @@ def main():
                 if args.gradient_accumulation_steps > 1:
                     loss = loss / args.gradient_accumulation_steps
                 if args.fp16:
-                    optimizer.backward(loss)
+                    # optimizer.backward(loss) deprecated
+                    with amp.scale_loss(loss, optimizer) as scaled_loss:
+                        scaled_loss.backward()
                 else:
                     loss.backward()
                 tr_loss += loss.item()
