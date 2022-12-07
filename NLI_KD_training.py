@@ -34,13 +34,13 @@ DEBUG = True
 if DEBUG:
     logger.info("IN DEBUG MODE")
     # run simple fune-tuning *teacher* by uncommenting below cmd
-    argv = get_predefine_argv('glue', 'RTE', 'finetune_teacher')
+    # argv = get_predefine_argv('glue', 'RTE', 'finetune_teacher')
 
     # run simple fune-tuning *student* by uncommenting below cmd
     # argv = get_predefine_argv('glue', 'RTE', 'finetune_student')
 
     # run vanilla KD by uncommenting below cmd
-    # argv = get_predefine_argv('glue', 'RTE', 'kd')
+    argv = get_predefine_argv('glue', 'RTE', 'kd')
 
     # run Patient Teacher by uncommenting below cmd
     # argv = get_predefine_argv('glue', 'RTE', 'kd.cls')
