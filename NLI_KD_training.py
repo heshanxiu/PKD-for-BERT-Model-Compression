@@ -40,7 +40,7 @@ if DEBUG:
     # argv = get_predefine_argv('glue', 'RTE', 'finetune_student')
 
     # run vanilla KD by uncommenting below cmd
-    argv = get_predefine_argv('glue', 'RTE', 'kd')
+    # argv = get_predefine_argv('glue', 'RTE', 'kd')
 
     # run Patient Teacher by uncommenting below cmd
     # argv = get_predefine_argv('glue', 'RTE', 'kd.cls')

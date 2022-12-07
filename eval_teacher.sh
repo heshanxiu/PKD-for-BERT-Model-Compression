@@ -10,8 +10,4 @@
 #SBATCH --gpus=1
 #SBATCH -t 08:00:00
 
-module load anaconda3
-eval "$(conda shell.bash hook)"
-conda activate /home/she2/anaconda3/envs/ir/
-
-#/bin/bash -c "python -m rerank_eval_teacher"
+/bin/bash -c "python run_glue_benchmark.py"
