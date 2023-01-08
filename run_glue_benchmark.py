@@ -28,12 +28,20 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message
 logger = logging.getLogger(__name__)
 
 
-DEBUG = True
+DEBUG = False  ## TODO: debug should be false; command line should define tasks; input; false; result file; model
+generate_teacher = True
 
 ALL_TASKS = ['MRPC', 'RTE', 'SST-2', 'MNLI', 'QQP', 'MNLI-mm', 'QNLI', 'race-merge']
+paper_tasks = ['SST-2', 'MRPC', 'QQP', 'MNLI', 'MNLI-mm', 'QNLI', 'RTE']
 
 if DEBUG:
     interested_task = 'RTE'.split(',')
+    prediction_mode_input = 'teacher:train,dev,test'
+    output_all_layers = False  # True for patient teacher and False for normal teacher; we only want normal teacher
+    bert_model = 'bert-base-uncased'
+    result_file = os.path.join(PROJECT_FOLDER, 'result/glue/result_summary/teacher_12layer_all.csv')
+elif generate_teacher:
+    interested_task = paper_tasks
     prediction_mode_input = 'teacher:train,dev,test'
     output_all_layers = False  # True for patient teacher and False for normal teacher; we only want normal teacher
     bert_model = 'bert-base-uncased'
