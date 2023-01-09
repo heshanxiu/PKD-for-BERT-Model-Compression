@@ -60,8 +60,10 @@ for t in interested_task:
 ##############################################################
 # Global Variables
 ##############################################################
+
 AVAILABLE_MODE = ['teacher', 'benchmark']
 KD_DIR = os.path.join(HOME_DATA_FOLDER, 'outputs/KD/')
+
 
 sub_dir = '_'.join(os.path.basename(result_file).split('_')[:-1])
 
